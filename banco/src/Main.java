@@ -1,11 +1,10 @@
 import java.util.Scanner;
 
-public class App {
+public class Main {
 
     private final static Scanner scanner = new Scanner(System.in);
     private static ContaBancaria contaBancaria;
     public static void main(String[] args) throws Exception {
-        //scanner.useDelimiter("\\n");
         var option = -1;
         
         System.out.println("Digite o saldo inicial da sua conta");
@@ -41,11 +40,11 @@ public class App {
             while (true) {
                 if (scanner.hasNextInt()) {
                     int valor = scanner.nextInt();
-                    scanner.nextLine(); // Limpa o buffer do teclado
+                    scanner.nextLine(); 
                     return valor;
                 } else {
                     System.out.println("Entrada inválida! Por favor, digite um número inteiro.");
-                    scanner.next(); // Descarta a entrada inválida
+                    scanner.next(); 
                 }
             }
         }
